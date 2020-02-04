@@ -39,3 +39,27 @@ sqlite> .tables
 
 sqlite> SELECT * FROM classification_totals;
 ```
+## Problem 1: 
+
+Pipeline.data_cleanup() #cleans the first column of every row for format "1979.486.5” and discards all other rows
+
+Unit test case: test_data_cleanup()
+
+## Problem 2:
+
+Pipeline.normalize_row() #creates two separate column for date range. (1843, 1843-56, 1843-1943, ca. 1843)
+
+There are other date formats as well in the column such as:
+  19th century (?)
+  19th century
+  after 1886
+I have not workd on those and have copied these dates to both the extra columns as it is
+
+Unit test case: test_normalize_row
+
+## Problem 3:
+
+Pipeline.running_total() Calculates total count for different items
+
+Unit test case: test_classification_total()
+
