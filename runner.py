@@ -44,8 +44,8 @@ class Runner:
                         Pipeline.running_total(cleaned_row, self.running_total_dict) # Step 3: Calculate running_total
 
                     line_num += 1
-                    if line_num == 2000:
-                        break;
+                    #if line_num == 2000:
+                        #break;
 
             # Populate classification_totals table with calculated running totals
             for classification, totals in self.running_total_dict.items():

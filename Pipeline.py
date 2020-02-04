@@ -10,32 +10,19 @@ def data_cleanup(row):
 
 """ data normalization as per problem 2 statement """
 def normalize_row(date):
-    #print(cleaned_row[21])
     if re.match(u'()([\d]{4})$', date):
-          #match=re.match(u'()([\d]{4})$', cleaned_row[21])
-          #print(match.group(2))
           return(date, date)
 
     elif re.match(u'([\d]{4})[–]([\d]{2})$', date):
-          #match=re.match(u'([\d]{4})[–]([\d]{2})$', cleaned_row[21])
-          #print(match.group())
-          #print(cleaned_row[21], 'b')
           return(normalize_dates(date, '–'))
 
     elif re.match(u'([\d]{4})[–]([\d]{4})$', date):
-          #match = re.match(u'([\d]{4})[–]([\d]{4})$', cleaned_row[21])
-          #print(match.group())
-          #print(cleaned_row[21], 'c')
           return(normalize_dates(date, '–'))
 
     elif re.match(u'(^ca.)([\d]{4})$', date):
-          #match=re.match(u'(^ca)\w+([\d]{4})', cleaned_row[21])
-          #print(match.group())
-          #print(cleaned_row[21], 'd')
           return(normalize_dates(date, 'ca.'))
 
     else:
-          print(date)
           return (date, date)
 
 """ Calculate running totals as per problem 3 statement """
