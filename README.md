@@ -5,6 +5,7 @@ A QuickFrame assignment to create data pipleline with data cleanup and normaliza
 ## Requirements
 
 Python3
+
 sqllite3 (https://www.sqlite.org/2020/sqlite-tools-win32-x86-3310100.zip)
 
 ### QuickFrameAssignment can be installed directly from the source code:
@@ -29,6 +30,8 @@ $ python UnitTest.py
 
 unzip the downloaded sqlite3 and follow these commands
 ```
+> cd QuickFrameAssignment
+
 > <path to the exe>\sqlite3.exe
 
 sqlite> .open pythonsqlite.db
@@ -50,10 +53,11 @@ Unit test case: test_data_cleanup()
 Pipeline.normalize_row() #creates two separate column for date range. (1843, 1843-56, 1843-1943, ca. 1843)
 
 There are other date formats as well in the column such as:
-  19th century (?)
-  19th century
+  19th century (?), 
+  19th century, 
   after 1886
-I have not workd on those and have copied these dates to both the extra columns as it is
+  
+As these were not mentioned in the problem statement, I have skipped calculations for them and have copied these dates to both the extra columns as it is.
 
 Unit test case: test_normalize_row
 
