@@ -19,6 +19,16 @@ class quickframetestcases(unittest.TestCase):
         self.assertEqual(2,len(output_list))
 
     def test_normalize_row(self):
+        input_list = ["1853","1901","1909–27","1800–1900","1867","ca. 1785","1795–1810"]
+
+        output_dict = {}
+        for row in input_list:
+            date_range = Pipeline.normalize_row(cleaned_row[21])
+            self.assertEqual(4, date_range[0])
+            self.assertEqual(4, date_range[1])
+
+
+    def test_classification_total(self):
         input_list = [
             ['1979.486.1', 'FALSE', 'FALSE', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
              '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Metal'],
@@ -37,6 +47,8 @@ class quickframetestcases(unittest.TestCase):
         self.assertEqual(2,output_dict['Metal'])
         self.assertEqual(1, output_dict['Furniture'])
         self.assertEqual(1, output_dict['Gold'])
+
+
 
         def select_table(self):
 
