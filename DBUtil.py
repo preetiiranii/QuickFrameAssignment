@@ -39,7 +39,7 @@ class DBUtil:
             db_cursor = self.get_cursor()
             db_cursor.execute(insert_stmt)
         except Error as e:
-            #print(e)
+            print(e)
             #print(insert_stmt)
             pass
 

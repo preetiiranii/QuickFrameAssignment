@@ -5,8 +5,7 @@ import runner
 def data_cleanup(row):
     if re.match("([\d]+)[.]([\d]+)[.]([\d]+)$", row[0]):
         return row
-    #else:
-        #print(row)
+    
 
 """ data normalization as per problem 2 statement """
 def normalize_row(date):

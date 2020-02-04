@@ -57,6 +57,7 @@ class Runner:
             self.dbobj.commit()
             #self.dbobj.select_table("data_normalized")
             #self.dbobj.select_table("classification_totals")
+            self.dbobj.close_connection()
 
 
     def setup_tables(self, row, insert_columns):
